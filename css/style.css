@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial;
     margin: 0;
@@ -20,3 +21,31 @@ nav a {
     margin: 10px;
     text-decoration: none;
 }
+=======
+/* Style personnalisé pour EduFlow AI */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+header {
+    background: linear-gradient(135deg, #007bff 0%, #003366 100%);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h2, h3 {
+    color: #003366;
+    margin-top: 20px;
+}
+
+.badge {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    margin: 5px;
+}
+>>>>>>> bb6fdcd (feat: design global et JS par Moulaye)
