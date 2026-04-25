@@ -1,31 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Site Vitrine</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduFlow AI - Optimisation LMD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-    <h1>Bienvenue sur notre site</h1>
-</header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html text-primary">EduFlow AI</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link active" href="index.html">Accueil</a>
+                <a class="nav-link" href="dashboard.html">Tableau de Bord</a>
+                <a class="nav-link" href="a-propos.html">Équipe</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-<nav>
-    <a href="#">Accueil</a>
-    <a href="#">À propos</a>
-    <a href="#">Formations</a>
-    <a href="#">Contact</a>
-</nav>
+    <header class="hero-section text-center text-white bg-primary py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Maîtrisez votre parcours LMD avec l'IA</h1>
+            <p class="lead">L'algorithme intelligent qui priorise vos révisions selon les coefficients et les crédits.</p>
+            <a href="dashboard.html" class="btn btn-light btn-lg mt-3">Accéder au Dashboard</a>
+        </div>
+    </header>
 
-<section>
-    <h2>Accueil</h2>
-    <p>Présentation du projet.</p>
-</section>
+    <main class="container my-5">
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm p-4">
+                    <h3>Analyse LMD</h3>
+                    <p>Vérification automatique de la conformité aux 30 crédits par semestre.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm p-4">
+                    <h3>Priorité IA</h3>
+                    <p>Calcul dynamique des matières urgentes basé sur vos statistiques réelles.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm p-4">
+                    <h3>Interface Web/Mobile</h3>
+                    <p>Une expérience fluide pour suivre vos progrès partout, tout le temps.</p>
+                </div>
+            </div>
+        </div>
+    </main>
 
-<footer>
-    <p>© 2026 - Notre équipe</p>
-</footer>
+    <footer class="bg-light text-center py-4 border-top">
+        <p class="mb-0">&copy; 2026 EduFlow AI - Projet L2 IAGE - ISI Dakar</p>
+    </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>
-
