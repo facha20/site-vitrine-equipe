@@ -2,61 +2,265 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduFlow AI - Optimisation LMD</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>EduFlow AI - Gestion intelligente de cursus académique</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+     <!-- ==================== NAVIGATION ==================== -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html text-primary">EduFlow AI</a>
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link active" href="index.html">Accueil</a>
-                <a class="nav-link" href="dashboard.html">Tableau de Bord</a>
-                <a class="nav-link" href="a-propos.html">Équipe</a>
-                <a class="nav-link" href="contact.html">Contact</a>
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-brain me-2"></i>EduFlow AI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#fonctionnalites">Fonctionnalités</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#demo">Démonstration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#equipe">Équipe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero-section text-center text-white bg-primary py-5">
+    <!-- ==================== SECTION ACCUEIL ==================== -->
+    <section id="accueil" class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold mb-3">EduFlow AI</h1>
+            <p class="lead fs-4 mb-4">Système Intelligent de Gestion de Cursus Académique</p>
+            <p class="mb-4">Priorisez automatiquement vos révisions grâce à notre algorithme IA basé sur les crédits ECTS et coefficients.</p>
+            <a href="#demo" class="btn btn-primary btn-lg">Découvrir la démo</a>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION FONCTIONNALITÉS ==================== -->
+    <section id="fonctionnalites" class="py-5 bg-light">
         <div class="container">
-            <h1 class="display-4 fw-bold">Maîtrisez votre parcours LMD avec l'IA</h1>
-            <p class="lead">L'algorithme intelligent qui priorise vos révisions selon les coefficients et les crédits.</p>
-            <a href="dashboard.html" class="btn btn-light btn-lg mt-3">Accéder au Dashboard</a>
+            <h2 class="text-center mb-5">Fonctionnalités clés</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-graduation-cap fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Module LMD</h5>
+                            <p class="card-text">Gestion complète de vos UE avec contrôle automatique des 30 crédits ECTS par semestre.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-robot fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Smart Planning IA</h5>
+                            <p class="card-text">Algorithme de priorisation : <br><code>Priorité = (Crédits × Coef) / Jours restants</code></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Mode collaboratif</h5>
+                            <p class="card-text">Tableau Kanban pour répartir les tâches en équipe (À faire, En cours, Terminé).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
+    </section>
 
-    <main class="container my-5">
-        <div class="row g-4 text-center">
-            <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm p-4">
-                    <h3>Analyse LMD</h3>
-                    <p>Vérification automatique de la conformité aux 30 crédits par semestre.</p>
-                </div>
+    <!-- ==================== SECTION DÉMONSTRATION ==================== -->
+    <section id="demo" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Démonstration de l'algorithme IA</h2>
+            <p class="text-center mb-4">Exemple de calcul de priorité pour un étudiant en L2 IAGE</p>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Tâche / UE</th>
+                            <th>Crédits</th>
+                            <th>Coefficient</th>
+                            <th>Jours restants</th>
+                            <th>Score IA</th>
+                            <th>Priorité</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-danger">
+                            <td>Réviser Base de données</td>
+                            <td>6</td>
+                            <td>3</td>
+                            <td>5</td>
+                            <td><strong>3.6</strong></td>
+                            <td><span class="badge bg-danger">Urgent</span></td>
+                        </tr>
+                        <tr class="table-warning">
+                            <td>Rendre projet Java</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td><strong>1.0</strong></td>
+                            <td><span class="badge bg-warning text-dark">Moyen</span></td>
+                        </tr>
+                        <tr class="table-success">
+                            <td>Relire cours Réseaux</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>10</td>
+                            <td><strong>0.6</strong></td>
+                            <td><span class="badge bg-success">Maîtrisé</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm p-4">
-                    <h3>Priorité IA</h3>
-                    <p>Calcul dynamique des matières urgentes basé sur vos statistiques réelles.</p>
-                </div>
+            <div class="alert alert-info mt-3">
+                <i class="fas fa-lightbulb"></i> <strong>Formule :</strong> Priorité = (Crédits × Coefficient) / Jours restants. Plus le score est élevé, plus la tâche est prioritaire.
             </div>
-            <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm p-4">
-                    <h3>Interface Web/Mobile</h3>
-                    <p>Une expérience fluide pour suivre vos progrès partout, tout le temps.</p>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION ÉQUIPE AVEC IMAGES ==================== -->
+    <section id="equipe" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Notre équipe</h2>
+            <div class="row g-4">
+                
+                <!-- Membre 1 : Abdoul Aziz Diop -->
+                <div class="col-md-3">
+                    <div class="card text-center h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <img src="https://ui-avatars.com/api/?name=Abdoul+Aziz+Diop&background=667eea&color=fff&size=120&rounded=true&bold=true&length=2&font-size=0.60" 
+                                     alt="Abdoul Aziz Diop" 
+                                     class="rounded-circle img-fluid"
+                                     style="width: 120px; height: 120px; object-fit: cover;">
+                            </div>
+                            <h5 class="card-title mt-2">Abdoul Aziz Diop</h5>
+                            <p class="card-text text-muted">Chef de projet / Coordinateur</p>
+                            <div class="social-links">
+                                <a href="#" class="text-decoration-none me-2"><i class="fab fa-github"></i></a>
+                                <a href="#" class="text-decoration-none"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="text-decoration-none"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Membre 2 : Ndeye Fatou Diogoul -->
+                <div class="col-md-3">
+                    <div class="card text-center h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <img src="https://ui-avatars.com/api/?name=Ndeye+Fatou+Diogoul&background=48bb78&color=fff&size=120&rounded=true&bold=true&length=2&font-size=0.60" 
+                                     alt="Ndeye Fatou Diogoul" 
+                                     class="rounded-circle img-fluid"
+                                     style="width: 120px; height: 120px; object-fit: cover;">
+                            </div>
+                            <h5 class="card-title mt-2">Ndeye Fatou Diogoul</h5>
+                            <p class="card-text text-muted">Lead développeur front-end</p>
+                            <div class="social-links">
+                                <a href="#" class="text-decoration-none me-2"><i class="fab fa-github"></i></a>
+                                <a href="#" class="text-decoration-none"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="text-decoration-none"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Membre 3 : Moulaye Idrisse Haïdara -->
+                <div class="col-md-3">
+                    <div class="card text-center h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <img src="https://ui-avatars.com/api/?name=Moulaye+Idrisse+Ha%C3%AFdara&background=ed8936&color=fff&size=120&rounded=true&bold=true&length=2&font-size=0.60" 
+                                     alt="Moulaye Idrisse Haïdara" 
+                                     class="rounded-circle img-fluid"
+                                     style="width: 120px; height: 120px; object-fit: cover;">
+                            </div>
+                            <h5 class="card-title mt-2">Moulaye Idrisse Haïdara</h5>
+                            <p class="card-text text-muted">Tech Lead / GitHub Manager</p>
+                            <div class="social-links">
+                                <a href="#" class="text-decoration-none me-2"><i class="fab fa-github"></i></a>
+                                <a href="#" class="text-decoration-none"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="text-decoration-none"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Membre 4 : Ndeye Moda Katy Faye -->
+                <div class="col-md-3">
+                    <div class="card text-center h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <img src="https://ui-avatars.com/api/?name=Ndeye+Moda+Katy+Faye&background=e53e3e&color=fff&size=120&rounded=true&bold=true&length=2&font-size=0.60" 
+                                     alt="Ndeye Moda Katy Faye" 
+                                     class="rounded-circle img-fluid"
+                                     style="width: 120px; height: 120px; object-fit: cover;">
+                            </div>
+                            <h5 class="card-title mt-2">Ndeye Moda Katy Faye</h5>
+                            <p class="card-text text-muted">Responsable contenu & documentation</p>
+                            <div class="social-links">
+                                <a href="#" class="text-decoration-none me-2"><i class="fab fa-github"></i></a>
+                                <a href="#" class="text-decoration-none"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="text-decoration-none"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION CONTACT AVEC BACKGROUND BLEU ==================== -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contactez-nous</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form action="#" method="post">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nom complet</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Envoyer</button>
+                    </form>
+                    <p class="text-center mt-3 small">* Formulaire démonstratif - version vitrine</p>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <footer class="bg-light text-center py-4 border-top">
-        <p class="mb-0">&copy; 2026 EduFlow AI - Projet L2 IAGE - ISI Dakar</p>
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">© 2026 EduFlow AI - Projet réalisé par L2 IAGE sous la direction de M. Samba Bery Kane</p>
+            <p class="mt-2">
+                <a href="#" class="text-white text-decoration-none me-3"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" class="text-white text-decoration-none"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </p>
+        </div>
     </footer>
 
-    <script src="js/main.js"></script>
-</body>
-</html>
+    <!-- Bootstrap

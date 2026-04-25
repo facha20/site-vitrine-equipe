@@ -1,0 +1,118 @@
+  
+        /* Hero section */
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Cards animations */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 15px;
+            border: none;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+
+        /* Table des priorités */
+        .table-danger {
+            background-color: #f8d7da !important;
+        }
+
+        .table-warning {
+            background-color: #fff3cd !important;
+        }
+
+        .table-success {
+            background-color: #d1e7dd !important;
+        }
+
+        /* Section équipe améliorée */
+        #equipe .card {
+            transition: all 0.3s ease;
+        }
+
+        #equipe .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+        }
+
+        #equipe img {
+            border: 3px solid #667eea;
+            padding: 3px;
+            transition: all 0.3s ease;
+        }
+
+        #equipe .card:hover img {
+            border-color: #764ba2;
+            transform: scale(1.05);
+        }
+
+        .social-links a {
+            color: #667eea;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #764ba2;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 50px 0;
+                min-height: 40vh;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .display-3 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Navbar custom */
+        .navbar-brand i {
+            font-size: 1.5rem;
+        }
+
+        /* Formulaire */
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+
+        /* NOUVEAU : Background color bleu sur la section contact */
+        #contact {
+           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        /* Pour que le texte reste blanc et lisible sur fond bleu */
+        #contact h2,
+        #contact label,
+        #contact p {
+            color: white !important;
+        }
+
+        /* Garder le formulaire blanc pour la lisibilité */
+        #contact .form-control {
+            background-color: white;
+            color: #333;
+        }
+    
